@@ -13,11 +13,18 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     setIsOpen(true);
   };
 
+  const handleNavClick = (e) => {
+    if (isOpen) {
+      e.preventDefault();
+      setIsOpen(false);
+    }
+  };
+
   return (
     <nav className="sideNavbar">
       <ul className="nolist">
         <li>
-          <NavLink to={"/"}>
+          <NavLink to={"/"} onClick={handleNavClick}>
             <RiHome5Line
               size={28}
               className="text-white hover:text-stone-200"
@@ -25,7 +32,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to={"/movie"}>
+          <NavLink to={"/movie"} onClick={handleNavClick}>
             <RiMovieLine
               size={28}
               className="text-white hover:text-stone-200"
@@ -33,7 +40,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to={"/tv"}>
+          <NavLink to={"/tv"} onClick={handleNavClick}>
             <RiTvLine size={28} className="text-white hover:text-stone-200" />
           </NavLink>
         </li>

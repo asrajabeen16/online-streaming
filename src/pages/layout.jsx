@@ -6,11 +6,10 @@ import SearchForm from "../components/search-form/search-form";
 const AppLayout = ({ isOpen, setIsOpen }) => {
   return (
     <div className="layout">
-      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>
-      <SearchForm isOpen={isOpen} setIsOpen={setIsOpen}/>
-      <Outlet />
+    { isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>}
+    { isOpen && <SearchForm isOpen={isOpen} setIsOpen={setIsOpen}/>}
+    <Outlet />
     </div>
   );
 };
-
 export default AppLayout;
