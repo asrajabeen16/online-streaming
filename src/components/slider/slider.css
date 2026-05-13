@@ -1,0 +1,77 @@
+.listing--carousel .listing__head {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__items {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  line-height: 1.8;
+  white-space: nowrap;
+  transform: translateZ(0);
+  scroll-snap-type: x mandatory;
+  scroll-padding: 15px;
+  scrollbar-width: none;
+}
+
+.carousel__nav {
+  position: absolute;
+  top: 0;
+  bottom: 55px;
+  z-index: 1;
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  outline: 0;
+  transition: opacity 0.25s ease, background-color 0.25s ease;
+}
+
+.carousel__nav--right {
+  right: 0;
+}
+
+.carousel__nav--left {
+  left: 0;
+}
+
+.carousel__nav:focus,
+.carousel__nav:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 767px) {
+  .carousel__nav {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .listing--carousel .listing__head {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+
+  .carousel__nav {
+    width: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .listing--carousel .listing__head {
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+
+  .carousel__nav {
+    bottom: 55px;
+    width: 50px;
+  }
+}

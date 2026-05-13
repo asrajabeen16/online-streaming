@@ -1,0 +1,50 @@
+.page-search {
+  padding-top: 6rem;
+}
+
+.listing {
+  margin: 2.5rem 1.5rem;
+}
+
+.listing__head {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.listing__title {
+  font-size: 1.4rem;
+  letter-spacing: 0.4px;
+}
+
+.listing__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listing__items .card {
+  width: 33.3333333%;
+  padding: 0 0.4rem;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.listing {
+    margin-left: 0;
+    margin-right: 0;
+  }
+@media (min-width: 640px) {
+  .listing {
+    margin: 3rem 1.5rem;
+  }
+
+  .listing__items .card {
+    width: 25%;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+}

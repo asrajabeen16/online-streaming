@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    @apply bg-[#141414];
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding-left: 6rem;
+    }
+}
+
+.layout {
+    position: relative;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}

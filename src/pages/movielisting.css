@@ -1,0 +1,5 @@
+@media (min-width: 640px) {
+    .movie__listing__items .card {
+        width: 14%;
+    }
+}

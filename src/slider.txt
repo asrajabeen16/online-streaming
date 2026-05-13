@@ -1,0 +1,30 @@
+<div className="listing listing--carousel">
+          <div className="listing__head">
+            <h2 className="listing__title">Trending Movies</h2>{" "}
+            <a href="/movie/category/trending" className="listing__explore">
+              <strong>Explore All</strong>
+            </a>
+          </div>
+          <div className="carousel">
+            <button className="carousel__nav carousel__nav--left">Prev</button>
+            <div className="carousel__items">
+              {Array.from({ length: 10 }).map((_, index) => {
+                return (
+                  <div className="ml-[10px] card inline-block">
+                    <a href="">
+                      <div className="card__img">
+                        <img
+                          src="https://image.tmdb.org/t/p/w370_and_h556_bestv2/iRCgqpdVE4wyLQvGYU3ZP7pAtUc.jpg"
+                          alt=""
+                          className="w-full h-full"
+                        />
+                      </div>
+                    </a>
+                    <h2 className="card__name">Alien: Romulus</h2>
+                  </div>
+                );
+              })}
+            </div>
+            <button className="carousel__nav carousel__nav--right">Next</button>
+          </div>
+        </div>
